@@ -1,0 +1,207 @@
+configuration {
+	modi:                       "drun,run,filebrowser,window";
+    show-icons:                 true;
+    display-drun:               "";
+    display-run:                "";
+    display-filebrowser:        "";
+    display-window:             "";
+	drun-display-format:        "{name}";
+	window-format:              "{w} · {c} · {t}";
+}
+
+/*****----- Global Properties -----*****/
+* {
+    font:                        "JetBrains Mono Nerd Font 14";
+    background:                  #000000;
+    background-alt:              #000000;
+    foreground:                  #FFFFFF;
+    selected:                    #505050;
+    active:                      #909090;
+    urgent:                      #707070;
+}
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       800px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    border:			4px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    border-radius:               30px;
+    cursor:                      "default";
+    background-color:            @background;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    orientation:                 horizontal;
+    children:                    [ "imagebox", "listbox" ];
+    border-radius:               28px;
+
+}
+
+imagebox {
+    padding:                     30px;
+    margin:			 12px;
+    background-color:            transparent;
+    background-image:            url("~/.config/rofi/panda_baby_original.jpg", width);
+    orientation:                 vertical;
+    children:                    [ "inputbar", "dummy", "mode-switcher" ];
+}
+
+listbox {
+    spacing:                     20px;
+    padding:                     20px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+
+dummy {
+    background-color:            transparent;
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     15px;
+    padding:                     10px;
+    border-radius:               21px;
+    background-color:            #FFB7B7;
+    text-color:                  #ffffff;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+    font-style:                  bold;
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         " 🧐 ";
+    background-color:            #3F1D38;
+    text-color:                  #ffffff;
+    font-size:                   20px;
+    border-radius:               24px;
+   }
+entry {
+    enabled:                     true;
+    background-color:            #E19898;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "  Search";
+    placeholder-color:           #ffffff;
+    border-radius:		 12px;
+    padding-left: 	         19px;		 
+}
+
+/*****----- Mode Switcher -----*****/
+mode-switcher{
+    enabled:                     true;
+    spacing:                     20px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+button {
+    padding:                     15px;
+    border-radius:               19px;
+    background-color:            @background-alt;
+    text-color:                  inherit;
+    cursor:                      pointer;
+}
+button selected {
+    background-color:            @selected;
+    text-color:                  @foreground;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     15px;
+    padding:                     8px;
+    border-radius:               10px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+element normal.normal {
+    background-color:            #050505;
+    text-color:                  inherit;
+}
+element normal.urgent {
+    background-color:            #050505;
+    text-color:                  @foreground;
+}
+element normal.active {
+    background-color:            #e89ed4;
+    text-color:                  @foreground;
+}
+element selected.normal {
+    background-color:            #5c3751;
+    text-color:                  @foreground;
+}
+element selected.urgent {
+    background-color:            #000000;
+    text-color:                  @foreground;
+}
+element selected.active {
+    background-color:            #000000; 
+    text-color:                  @foreground;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        32px;
+    cursor:                      inherit;
+}
+element-text {
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/*****----- Message -----*****/
+message {
+    background-color:            transparent;
+}
+textbox {
+    padding:                     15px;
+    border-radius:               10px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+error-message {
+    padding:                     15px;
+    border-radius:               20px;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
