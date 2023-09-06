@@ -12,7 +12,7 @@
 
 <h2>Picom Inaction</h2> 
 
-<video src='./images/picom_in_action.mp4' width="280px" height="260px" margin="90px" controls autoplay></video>
+![meow](./images/picom_in_action.gif)
 
 <hr>
 
