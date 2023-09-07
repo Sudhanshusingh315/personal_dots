@@ -10,7 +10,7 @@
 
 <hr>
 
-<h2>Picom Inaction</h2> 
+<h2>Picom In Action</h2> 
 
 ![meow](./images/picom_in_action.gif)
 
