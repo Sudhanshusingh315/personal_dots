@@ -28,3 +28,16 @@
 - Fonts: Fonst Awesome/JetBrains mono
 
 <hr>
+
+<h1 style="background-color:rgb(196, 164, 132);color:white;font-style: italic;text-decoration: underline;padding-left:12px;">TODO</h1>
+
+- [] Adding Wlogout 
+- [] Eww spotify widgets
+- [] and more ....
+
+<hr>
+
+<hr>
+<span style="background-color:rgb(160,82,45);padding: 2px 2px 2px 2px; margin-right:2px">./newlook.sh </span> is only there to apply get wallpaers with shuffled manner
+<hr>
+<h3 style="background-color:rgba(255,255,255,0.4)">This is my first time creating dots.i'm learing everyday</h3>
